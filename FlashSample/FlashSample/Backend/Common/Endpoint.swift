@@ -45,14 +45,14 @@ extension GTFeed: Endpoint {
     }
     
     var base: String {
-        return "https://pastebin.com/"
+        return "https://pastebin.com"
     }
     
     var path: String {
         switch self {
             
         case .home:
-            return "raw/1WcGvnm5"
+            return "/raw/1WcGvnm5"
     }
 }
 }

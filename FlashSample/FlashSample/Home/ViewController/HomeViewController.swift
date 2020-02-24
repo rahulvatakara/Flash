@@ -6,6 +6,7 @@
 //  Copyright © 2020 Mindvalley. All rights reserved.
 //
 import UIKit
+import Flash
 
 class HomeViewController: UIViewController {
     
@@ -69,12 +70,19 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
         guard let item = items?[indexPath.row] else {
             return cell
         }
-        (cell as? ItemViewCell)?.titleLabel.text = item.title
+        (cell as? ItemViewCell)?.titleLabel.text = item.user?.name ?? ""
+        (cell as? ItemViewCell)?.descripLabel.text = item.user?.username ?? ""
+        if let imageUrl = item.user?.profile_image.medium,  let url = URL(string: imageUrl) {
+            Flash.shared.image(with: url, progress: .none) { (image) in
+                (cell as? ItemViewCell)?.itemImageView.image = image
+            }
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 170
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

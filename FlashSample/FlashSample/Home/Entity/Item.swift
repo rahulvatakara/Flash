@@ -10,7 +10,17 @@
 import Foundation
 
 struct Item: Decodable {
-    let title:String?
-    let descrip:String
-    let imageUrl:String
+    let id:String?
+    let user:User?
+
+}
+
+struct User: Decodable {
+    let name:String?
+    let username:String?
+    let profile_image: ProfileImage
+}
+
+struct ProfileImage: Decodable {
+    let medium:String?
 }
