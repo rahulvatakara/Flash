@@ -76,28 +76,28 @@
                                     <outlet property="delegate" destination="TmD-or-Ufj" id="hYD-zm-AYR"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="NAP-pE-XW4">
-                                <rect key="frame" x="197" y="465" width="20" height="20"/>
-                            </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qm0-eb-irf">
-                                <rect key="frame" x="207" y="475" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o7-vd-05M">
+                                <rect key="frame" x="20" y="475" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="hzt-n5-lqo">
+                                <rect key="frame" x="197" y="465" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hzt-n5-lqo" firstAttribute="centerY" secondItem="S5N-0z-NCF" secondAttribute="centerY" id="1sa-DL-wQW"/>
                             <constraint firstItem="QNx-Gb-2Ph" firstAttribute="leading" secondItem="S5N-0z-NCF" secondAttribute="leading" id="BvT-sO-xL9"/>
                             <constraint firstItem="S5N-0z-NCF" firstAttribute="trailing" secondItem="QNx-Gb-2Ph" secondAttribute="trailing" id="EPe-tH-sNj"/>
-                            <constraint firstItem="qm0-eb-irf" firstAttribute="centerX" secondItem="QNx-Gb-2Ph" secondAttribute="centerX" id="ONM-ju-zHU"/>
-                            <constraint firstItem="qm0-eb-irf" firstAttribute="centerY" secondItem="QNx-Gb-2Ph" secondAttribute="centerY" id="dJ2-wR-jJL"/>
-                            <constraint firstItem="qm0-eb-irf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S5N-0z-NCF" secondAttribute="leading" constant="10" id="e7O-Hn-k1B"/>
+                            <constraint firstItem="S5N-0z-NCF" firstAttribute="trailing" secondItem="3o7-vd-05M" secondAttribute="trailing" constant="20" id="Oyw-3D-NR7"/>
+                            <constraint firstItem="hzt-n5-lqo" firstAttribute="centerX" secondItem="S5N-0z-NCF" secondAttribute="centerX" id="ayj-Kc-4Td"/>
+                            <constraint firstItem="3o7-vd-05M" firstAttribute="centerX" secondItem="S5N-0z-NCF" secondAttribute="centerX" id="bar-er-6Qa"/>
                             <constraint firstItem="S5N-0z-NCF" firstAttribute="bottom" secondItem="QNx-Gb-2Ph" secondAttribute="bottom" id="eyd-D5-4p9"/>
-                            <constraint firstItem="S5N-0z-NCF" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qm0-eb-irf" secondAttribute="trailing" constant="10" id="gMc-ff-zND"/>
+                            <constraint firstItem="3o7-vd-05M" firstAttribute="centerY" secondItem="S5N-0z-NCF" secondAttribute="centerY" id="h7g-Yh-0xN"/>
                             <constraint firstItem="QNx-Gb-2Ph" firstAttribute="top" secondItem="S5N-0z-NCF" secondAttribute="top" id="k2y-cS-ADN"/>
-                            <constraint firstItem="QNx-Gb-2Ph" firstAttribute="centerX" secondItem="NAP-pE-XW4" secondAttribute="centerX" id="ngM-kg-rEA"/>
-                            <constraint firstItem="QNx-Gb-2Ph" firstAttribute="centerY" secondItem="NAP-pE-XW4" secondAttribute="centerY" id="ukz-Ec-qnp"/>
+                            <constraint firstItem="3o7-vd-05M" firstAttribute="leading" secondItem="S5N-0z-NCF" secondAttribute="leading" constant="20" id="pfk-Ob-62h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S5N-0z-NCF"/>
                         <userDefinedRuntimeAttributes>
@@ -111,8 +111,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="NAP-pE-XW4" id="UQ9-w6-HXw"/>
-                        <outlet property="noResponseLabel" destination="qm0-eb-irf" id="BuL-mD-bSj"/>
+                        <outlet property="activityIndicatorView" destination="hzt-n5-lqo" id="4Jz-d5-40g"/>
+                        <outlet property="noResponseLabel" destination="3o7-vd-05M" id="AGX-bx-0kL"/>
                         <outlet property="tableView" destination="QNx-Gb-2Ph" id="t4s-a1-fvO"/>
                     </connections>
                 </viewController>
